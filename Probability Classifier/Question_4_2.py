@@ -22,7 +22,6 @@ def create_train_data():
 
 
 train_data = create_train_data()
-print(train_data)
 
 
 def compute_prior_probablity(train_data):
@@ -76,7 +75,7 @@ def train_naive_bayes(train_data):
 
 data = create_train_data()
 prior_probability, mean, variance = train_naive_bayes(data)
-print(prior_probability, "\nMean", mean, "\nVariance", variance)
+print("Mean", mean, "\nVariance", variance)
 
 
 def prediction_Iris(X, prior_probability, mean, variance):
