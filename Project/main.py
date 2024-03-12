@@ -41,8 +41,7 @@ for i in range(num):
     y2 = int(y2n * H)
     img = cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
     class_name = coco_names[int(output[i, 1])]
-    img = cv2.putText(img, class_name, (x1, y1 - 10), font, 0.5,
-                      (255, 0, 0), 1, cv2.LINE_AA)
+    img = cv2.putText(img, class_name, (x1, y1 - 10), font, 0.5, (255, 0, 0), 1, cv2.LINE_AA)
 
 cv2.imshow("Result", img)
 cv2.waitKey(0)

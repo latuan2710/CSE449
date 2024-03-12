@@ -61,4 +61,4 @@ def gauss(x, mean, sigma):
 data = create_train_data()
 means = cal_mean(data)
 sigmas = cal_sigma(data, means)
-print(sigmas)
+print(means, sigmas)
