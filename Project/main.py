@@ -14,10 +14,11 @@ coco_names = ["person", "bicycle", "car", "motorcycle", "airplane", "bus", "trai
 
 weightsPath = "frozen_inference_graph.pb"
 configPath = "mask_rcnn_inception_v2_coco_2018_01_28.pbtxt"
+imgPath = "doggo.jpg"
 
 net = cv2.dnn.readNetFromTensorflow(weightsPath, configPath)
 
-image = cv2.imread("test.jpg")
+image = cv2.imread(imgPath)
 (H, W) = image.shape[:2]
 
 blob = cv2.dnn.blobFromImage(image, swapRB=True, crop=False)
@@ -32,7 +33,7 @@ num = np.argwhere(output[:, 2] > 0.8).shape[0]
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
-img = cv2.imread("test.jpg")
+img = cv2.imread(imgPath)
 for i in range(num):
     x1n, y1n, x2n, y2n = output[i, 3:]
     x1 = int(x1n * W)
