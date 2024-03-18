@@ -14,7 +14,7 @@ coco_names = ["person", "bicycle", "car", "motorcycle", "airplane", "bus", "trai
 
 weightsPath = "frozen_inference_graph.pb"
 configPath = "mask_rcnn_inception_v2_coco_2018_01_28.pbtxt"
-imgPath = "doggo.jpg"
+imgPath = "test3.jpg"
 
 net = cv2.dnn.readNetFromTensorflow(weightsPath, configPath)
 
